@@ -1,0 +1,37 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local database and video bytes. The deploy uses Cloud SQL and Cloud Storage.
+*.db
+*.db-shm
+*.db-wal
+data/
+storage/uploads/
+storage/outputs/
+
+# Node. Commit package-lock.json. Do not commit installed modules or the Vite build.
+node_modules/
+dist/
+.vite/
+*.tsbuildinfo
+
+# Secrets. Commit .env.example only.
+.env
+.env.*
+!.env.example
+*-sa.json
+*credentials*.json
+
+# Terraform, if you add it under deploy/
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+
+.DS_Store
